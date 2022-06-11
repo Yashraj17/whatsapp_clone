@@ -5,7 +5,7 @@ const Demo = () => {
   return (
     <View>
       <Text>This is Uttsav</Text>
-      <Text>This is yash</Text>
+      
     </View>
   )
 }
