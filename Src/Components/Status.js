@@ -4,7 +4,11 @@ import React from 'react'
 const Status = () => {
   return (
     <View>
-      <Text>Status</Text>
+      <Text>Status my status is black 2 </Text>
+      <Text>Status my status is black 2 </Text>
+      <Text>Status my status is black 2 </Text>
+      <Text>Status my status is black 4 </Text>
+
     </View>
   )
 }
