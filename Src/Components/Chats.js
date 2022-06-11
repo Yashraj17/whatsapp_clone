@@ -5,6 +5,18 @@ const Chats = () => {
   return (
     <View style={{backgroundColor:'black' ,flex:1}}>
       <Text > hello Chats this is uttsav </Text>
+      <Text > hello Chats this is uttsav </Text>
+      <Text > hello Chats this is uttsav </Text>
+      <Text > hello Chats this is uttsav </Text>
+      <Text > hello Chats this is uttsav </Text>
+      <Text > hello Chats this is uttsav </Text>
+      <Text > hello Chats this is uttsav </Text>
+      <Text > hello Chats this is uttsav </Text>
+      <Text > hello Chats this is uttsav </Text>
+      <Text > hello Chats this is uttsav </Text>
+      <Text > hello Chats this is uttsav </Text>
+      <Text > hello Chats this is uttsav </Text>
+      <Text > hello Chats this is uttsav </Text>
     </View>
   )
 }
