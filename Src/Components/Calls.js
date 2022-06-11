@@ -4,7 +4,12 @@ import React from 'react'
 const Calls = () => {
   return (
     <View>
-      <Text>Calls</Text>
+      <Text>Call1</Text>
+      <Text>Call2</Text>
+      <Text>Call3</Text>
+      <Text>Call4</Text>
+      <Text>Call5</Text>
+      <Text>Call6</Text>
     </View>
   )
 }
