@@ -1,13 +1,12 @@
 import { Pressable, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
-import { Box, HStack, NativeBaseProvider,VStack,Avatar, Heading, Spacer, ScrollView,Fab } from 'native-base'
+import { Box, HStack,VStack,Avatar, Heading, Spacer, ScrollView,Fab } from 'native-base'
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 
 const Status = () => {
   const [showMuted,setShowMuted] = React.useState(false)
   return (
     <View style={{backgroundColor:'#111b21' ,flex:1}}>
-      <NativeBaseProvider>
       <VStack padding={2}>
 
         {/* //////My status  */}
@@ -159,7 +158,6 @@ const Status = () => {
         </Pressable>
 
       </VStack>
-      </NativeBaseProvider>
      
     
     </View>

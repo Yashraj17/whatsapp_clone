@@ -7,7 +7,8 @@ import StackNavigation from './Src/Screens/StackNavigation';
 const App = () => {
   return (
   <NavigationContainer>
-      <StackNavigation/>
+        <StackNavigation/>
+      
   </NavigationContainer>
   )
 }

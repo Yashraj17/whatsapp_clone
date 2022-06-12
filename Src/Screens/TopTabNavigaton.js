@@ -4,16 +4,19 @@ import { createMaterialTopTabNavigator } from '@react-navigation/material-top-ta
 import Chats from '../Components/Chats';
 import Status from '../Components/Status';
 import Calls from '../Components/Calls';
+import { NativeBaseProvider } from 'native-base';
 
 const Tab = createMaterialTopTabNavigator();
 
 const TopTabNavigaton = () => {
   return (
+    <NativeBaseProvider>
    <Tab.Navigator>
         <Tab.Screen name='Chats' component={Chats} />
         <Tab.Screen name='Status' component={Status} />
         <Tab.Screen name='Calls' component={Calls} />
    </Tab.Navigator>
+   </NativeBaseProvider>
   )
 }
 

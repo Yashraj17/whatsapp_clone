@@ -3,11 +3,11 @@ import React from 'react'
 import { Box, HStack, NativeBaseProvider,VStack,Avatar, Heading, Spacer, ScrollView,Fab } from 'native-base'
 
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
+import { TouchableOpacity } from 'react-native-gesture-handler';
 
-const Chats = () => {
+const Chats = ({navigation}) => {
   return (
     <View style={{backgroundColor:'#111b21' ,flex:1}}>
-      <NativeBaseProvider>
 
         {/* //// fab icon */}
       <Fab shadow={2} boxSize='58px' bgColor='#01a985' icon={<MaterialIcons color="white" name="message"  size={28} />} />
@@ -15,6 +15,7 @@ const Chats = () => {
         <ScrollView>
 
         {/* /////user list */}
+        <TouchableOpacity  onPress={()=>{navigation.navigate('Message')}}>
         <Box padding={3}>
           <HStack space={4} >
           <Avatar size="50px" source={{
@@ -30,6 +31,9 @@ const Chats = () => {
         <Text color="coolGray.600" style={{fontSize:12}}>7:00 am </Text>
           </HStack>
         </Box>
+        </TouchableOpacity>
+       
+
         <Box padding={3}>
           <HStack space={4} >
           <Avatar size="50px" source={{
@@ -50,7 +54,6 @@ const Chats = () => {
        
        
       </VStack>
-      </NativeBaseProvider>
      
     
     </View>

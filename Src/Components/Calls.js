@@ -8,7 +8,6 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 const Calls = () => {
   return (
     <View style={{flex:1,backgroundColor:'#111b21'}}>
-     <NativeBaseProvider>
       <VStack space={1} padding={2}>
           <ScrollView>
 
@@ -117,7 +116,6 @@ const Calls = () => {
 
           </ScrollView>
       </VStack>
-     </NativeBaseProvider>
     </View>
   )
 }
