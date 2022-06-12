@@ -1,23 +1,58 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
+import { Box, HStack, NativeBaseProvider,VStack,Avatar, Heading, Spacer, ScrollView,Fab } from 'native-base'
+
+import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 
 const Chats = () => {
   return (
-    <View style={{backgroundColor:'black' ,flex:1}}>
-      <Text > hello Chats this is uttsav </Text>
-      <Text > hello Chats this is yash </Text>
-      <Text > hello Chats this is uttsav </Text>
-      <Text > hello Chats this is uttsav </Text>
-      <Text > hello Chats this is uttsav </Text>
-      <Text > hello Chats this is uttsav </Text>
-      <Text > hello Chats this is uttsav </Text>
-      <Text > hello Chats this is uttsav </Text>
-      <Text > hello Chats this is uttsav </Text>
-      <Text > hello Chats this is uttsav </Text>
-      <Text > hello Chats this is uttsav </Text>
-      <Text > hello Chats this is uttsav </Text>
-      <Text > hello Chats this is uttsav </Text>
-      <Text > hello Chats this is uttsav </Text>
+    <View style={{backgroundColor:'#111b21' ,flex:1}}>
+      <NativeBaseProvider>
+
+        {/* //// fab icon */}
+      <Fab shadow={2} boxSize='58px' bgColor='#01a985' icon={<MaterialIcons color="white" name="message"  size={28} />} />
+      <VStack space={1} marginTop={1}>
+        <ScrollView>
+
+        {/* /////user list */}
+        <Box padding={3}>
+          <HStack space={4} >
+          <Avatar size="50px" source={{
+            uri: 'https://letsenhance.io/static/334225cab5be263aad8e3894809594ce/75c5a/MainAfter.jpg'
+        }} />
+        <VStack top={1}>
+          <Heading  color='white'fontSize={15} fontWeight='700'>Uttsav Kumar</Heading>
+          <Text color="coolGray.600" _dark={{
+            color: "warmGray.200"
+          }}>Send 13m ago </Text>
+        </VStack>
+        <Spacer/>
+        <Text color="coolGray.600" style={{fontSize:12}}>7:00 am </Text>
+          </HStack>
+        </Box>
+        <Box padding={3}>
+          <HStack space={4} >
+          <Avatar size="50px" source={{
+            uri: 'https://letsenhance.io/static/334225cab5be263aad8e3894809594ce/75c5a/MainAfter.jpg'
+        }} />
+        <VStack top={1}>
+          <Heading  color='white'fontSize={15} fontWeight='700'>Uttsav Kumar</Heading>
+          <Text color="coolGray.600" _dark={{
+            color: "warmGray.200"
+          }}>Send 13m ago </Text>
+        </VStack>
+        <Spacer/>
+        <Text color="coolGray.600" style={{fontSize:12}}>7:00 am </Text>
+          </HStack>
+        </Box>
+      
+        </ScrollView>
+       
+       
+      </VStack>
+      </NativeBaseProvider>
+     
+    
     </View>
   )
 }
