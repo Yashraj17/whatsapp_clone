@@ -8,6 +8,7 @@ const Status = () => {
       <Text>Status my status is black 2 </Text>
       <Text>Status my status is black 2 </Text>
       <Text>Status my status is black 4 </Text>
+      <Text>hello uttsav </Text>
 
     </View>
   )
