@@ -3,7 +3,7 @@ import React from 'react'
 
 const Demo = () => {
   return (
-    <View>
+    <View style={{flex:1,backgroundColor:'#111b21'}}>
       <Text>This is Uttsav</Text>
       
     </View>

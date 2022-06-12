@@ -21,7 +21,7 @@ const Chats = () => {
             uri: 'https://letsenhance.io/static/334225cab5be263aad8e3894809594ce/75c5a/MainAfter.jpg'
         }} />
         <VStack top={1}>
-          <Heading  color='white'fontSize={15} fontWeight='700'>Uttsav Kumar</Heading>
+          <Heading  color='white'fontSize={15} fontWeight='600'>Uttsav Kumar</Heading>
           <Text color="coolGray.600" _dark={{
             color: "warmGray.200"
           }}>Send 13m ago </Text>
@@ -36,7 +36,7 @@ const Chats = () => {
             uri: 'https://letsenhance.io/static/334225cab5be263aad8e3894809594ce/75c5a/MainAfter.jpg'
         }} />
         <VStack top={1}>
-          <Heading  color='white'fontSize={15} fontWeight='700'>Uttsav Kumar</Heading>
+          <Heading  color='white'fontSize={15} fontWeight='600'>Uttsav Kumar</Heading>
           <Text color="coolGray.600" _dark={{
             color: "warmGray.200"
           }}>Send 13m ago </Text>

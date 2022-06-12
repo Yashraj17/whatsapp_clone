@@ -27,7 +27,7 @@ const Status = () => {
         </Box>
        </HStack>
        
-       {/* //// viewes updates */}
+       {/* //// recent updates */}
        <HStack padding={2}>
           <Text color="coolGray.600"
           style={{fontWeight:'500',marginLeft:5}}
@@ -46,7 +46,7 @@ const Status = () => {
         }} />
             </Box>
         <VStack top={1} space={1}>
-          <Heading  color='white'fontSize={15} fontWeight='700'>Shivam kumar</Heading>
+          <Heading  color='white'fontSize={15} fontWeight='600'>Shivam kumar</Heading>
           <Text color="coolGray.600" _dark={{
             color: "warmGray.200"
           }}>Today, 12:45 pm </Text>
@@ -74,7 +74,7 @@ const Status = () => {
         }} />
             </Box>
         <VStack top={1} space={1}>
-          <Heading  color='white'fontSize={15} fontWeight='700'>Shivam kumar</Heading>
+          <Heading  color='white'fontSize={15} fontWeight='600'>Shivam kumar</Heading>
           <Text color="coolGray.600" _dark={{
             color: "warmGray.200"
           }}>Today, 12:45 pm </Text>
@@ -91,7 +91,7 @@ const Status = () => {
         }} />
             </Box>
         <VStack top={1} space={1}>
-          <Heading  color='white'fontSize={15} fontWeight='700'>Shivam kumar</Heading>
+          <Heading  color='white'fontSize={15} fontWeight='600'>Shivam kumar</Heading>
           <Text color="coolGray.600" _dark={{
             color: "warmGray.200"
           }}>Today, 12:45 pm </Text>
@@ -120,38 +120,38 @@ const Status = () => {
                 <>
                   <Box padding={3}>
                 <HStack space={4} >
-                  <Box borderWidth={2} justifyContent='center' height='55px' width='55px' style={{borderColor:'gray',borderRadius:40}} >
-                  <Avatar size="46px"
+                  <Box justifyContent='center' height='55px' width='55px' style={{borderColor:'gray',borderRadius:40}} >
+                  <Avatar size="48px"
                 style={{ alignSelf:'center'}}
                 source={{
                   uri: 'https://letsenhance.io/static/334225cab5be263aad8e3894809594ce/75c5a/MainAfter.jpg'
               }} />
                   </Box>
               <VStack top={1} space={1}>
-                <Heading  color='white'fontSize={15} fontWeight='700'>Shivam kumar</Heading>
+                <Heading  color='white'fontSize={15} fontWeight='600'>Shivam kumar</Heading>
                 <Text color="coolGray.600" _dark={{
                   color: "warmGray.200"
                 }}>Today, 12:45 pm </Text>
               </VStack>
                 </HStack>
-                </Box>
+                  </Box>
                   <Box padding={3}>
                 <HStack space={4} >
-                  <Box borderWidth={2} justifyContent='center' height='55px' width='55px' style={{borderColor:'gray',borderRadius:40}} >
-                  <Avatar size="46px"
+                  <Box justifyContent='center' height='55px' width='55px' style={{borderColor:'gray',borderRadius:40}} >
+                  <Avatar size="48px"
                 style={{ alignSelf:'center'}}
                 source={{
                   uri: 'https://letsenhance.io/static/334225cab5be263aad8e3894809594ce/75c5a/MainAfter.jpg'
               }} />
                   </Box>
               <VStack top={1} space={1}>
-                <Heading  color='white'fontSize={15} fontWeight='700'>Shivam kumar</Heading>
+                <Heading  color='white'fontSize={15} fontWeight='600'>Shivam kumar</Heading>
                 <Text color="coolGray.600" _dark={{
                   color: "warmGray.200"
                 }}>Today, 12:45 pm </Text>
               </VStack>
                 </HStack>
-                </Box>
+                  </Box>
                 </>
                
               }
