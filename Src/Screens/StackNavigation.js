@@ -1,21 +1,59 @@
 import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
-import { createStackNavigator } from '@react-navigation/stack'
+import React, { useEffect, useState } from 'react'
+import { CardStyleInterpolators, createStackNavigator } from '@react-navigation/stack'
 import TopTabNavigaton from './TopTabNavigaton';
 import Message from '../Components/Message';
+import { getFocusedRouteNameFromRoute } from '@react-navigation/native';
+import { NativeBaseProvider } from 'native-base';
+import FabComponent from '../Components/FabComponent';
 
 
 const Stack = createStackNavigator();
 
 const StackNavigation = () => {
+  const [page, setPage] = useState('')
   return (
-   <Stack.Navigator>
+    <NativeBaseProvider>
+      <Stack.Navigator
+        screenOptions={{
+          cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS
+        }}
+      >
 
-    {/* ///top navigation */}
-    <Stack.Screen name="Home" component={TopTabNavigaton} />
-    <Stack.Screen name='Message' component={Message}/>
+        {/* ///top navigation */}
+        <Stack.Screen name="Home" component={TopTabNavigaton}
+          // get routename
+          options={({ route }) => ({
+            headerShown: false,
+            tabBarStyle: ((route) => {
+              const routename = getFocusedRouteNameFromRoute(route)
+              if (routename === undefined || routename === 'Chats') {
+                useEffect(() => {
+                  setPage('Chats')
+                }, [routename])
+              }
+              else if (routename === 'Status') {
+                useEffect(() => {
+                  setPage('Status')
+                }, [routename])
+              }
+              else {
+                useEffect(() => {
+                  setPage('Calls')
+                }, [routename])
+              }
+            })(route),
 
-   </Stack.Navigator>
+          })}
+        />
+
+        <Stack.Screen name='Message' component={Message} />
+
+        {/* Fab Component */}
+        <Stack.Screen name='fab' children={() => <FabComponent page={page} />} />
+      </Stack.Navigator>
+    </NativeBaseProvider>
+
   )
 }
 

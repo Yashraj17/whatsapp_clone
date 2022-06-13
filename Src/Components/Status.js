@@ -2,10 +2,13 @@ import { Pressable, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import { Box, HStack,VStack,Avatar, Heading, Spacer, ScrollView,Fab } from 'native-base'
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
+import { useRoute } from '@react-navigation/native';
 
 const Status = () => {
   const [showMuted,setShowMuted] = React.useState(false)
+    
   return (
+
     <View style={{backgroundColor:'#111b21' ,flex:1}}>
       <VStack padding={2}>
 
