@@ -37,6 +37,11 @@ const StackNavigation = () => {
                   setPage('Status')
                 }, [routename])
               }
+              else if (routename === 'Camera') {
+                useEffect(() => {
+                  setPage('Camera')
+                }, [routename])
+              }
               else {
                 useEffect(() => {
                   setPage('Calls')
@@ -50,10 +55,10 @@ const StackNavigation = () => {
         <Stack.Screen name='Message' component={Message} />
 
         {/* Fab Component */}
-        <Stack.Screen name='fab' children={() => <FabComponent page={page} />} />
       </Stack.Navigator>
+      <FabComponent page={page} />
     </NativeBaseProvider>
-
+ 
   )
 }
 

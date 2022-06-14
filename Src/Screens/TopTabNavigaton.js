@@ -9,21 +9,22 @@ import Camera from '../Components/Camera';
 import FontAwesome from 'react-native-vector-icons/FontAwesome'
 const Tab = createMaterialTopTabNavigator();
 
-const SearchComponent = () => {
-    
-}
+
 const TopTabNavigaton = () => {
-  const[search,setSearch] = useState(false)
+  const [search, setSearch] = useState(false)
   const handleSearch = () => {
-    setSearch(true)
+    setSearch(() => (!search))
+    console.log(search)
+
   }
+
   return (
     <>
-      <Header handleSearch={handleSearch} />
+      <Header handleSearch={handleSearch} search={search} setSearch={setSearch} />
       <Tab.Navigator initialRouteName='Chats' screenOptions={({ route }) => ({
         tabBarStyle: {
           backgroundColor: '#1f2c34',
-          zIndex:1
+          zIndex: 1,
         },
         tabBarLabelStyle: {
           fontWeight: '500',
@@ -31,17 +32,24 @@ const TopTabNavigaton = () => {
 
         },
         tabBarIndicatorStyle: {
-          backgroundColor: '#03a37f'
+          backgroundColor: '#03a37f',
         },
         tabBarActiveTintColor: '#03a37f',
         tabBarInactiveTintColor: '#88969f',
 
-      })}>
-        <Tab.Screen name='Camera' component={Camera} options={{ 
+      }
+      )}
+      >
+        <Tab.Screen name='Camera' component={Camera} options={{
           tabBarShowLabel: false,
           tabBarIcon: ({ focused }) => (focused ? <FontAwesome name='camera' size={19} color="#03a37f" /> : <FontAwesome name='camera' size={19} color='#88969f' />),
-         }} />
-        <Tab.Screen name='Chats' component={Chats} />
+        }} />
+        <Tab.Screen name='Chats' component={Chats} options={{
+          tabBarStyle: {
+            ...search && { display: 'none' },
+            backgroundColor: '#1f2c34',
+          },
+        }} />
         <Tab.Screen name='Status' component={Status} />
         <Tab.Screen name='Calls' component={Calls} />
       </Tab.Navigator>
