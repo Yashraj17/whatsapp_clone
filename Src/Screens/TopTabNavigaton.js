@@ -7,6 +7,10 @@ import Calls from '../Components/Calls';
 import Header from '../Components/Header';
 import Camera from '../Components/Camera';
 import FontAwesome from 'react-native-vector-icons/FontAwesome'
+
+import { NativeBaseProvider } from 'native-base';
+import { useRoute } from '@react-navigation/native';
+
 const Tab = createMaterialTopTabNavigator();
 
 
@@ -18,8 +22,13 @@ const TopTabNavigaton = () => {
 
   }
 
+
+const route = useRoute();
+console.log('hello route',route.name);
+
   return (
     <>
+    <NativeBaseProvider>
       <Header handleSearch={handleSearch} search={search} setSearch={setSearch} />
       <Tab.Navigator initialRouteName='Chats' screenOptions={({ route }) => ({
         tabBarStyle: {
@@ -53,8 +62,8 @@ const TopTabNavigaton = () => {
         <Tab.Screen name='Status' component={Status} />
         <Tab.Screen name='Calls' component={Calls} />
       </Tab.Navigator>
+    </NativeBaseProvider> 
     </>
-
   )
 }
 

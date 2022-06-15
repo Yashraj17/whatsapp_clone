@@ -6,6 +6,8 @@ import { TouchableOpacity } from 'react-native-gesture-handler';
 import { useRoute } from '@react-navigation/native';
 import FabComponent from './FabComponent';
 
+import { getFocusedRouteNameFromRoute } from '@react-navigation/native';
+
 const Chats = ({ navigation }) => {
 
   const route = useRoute();
@@ -13,7 +15,7 @@ const Chats = ({ navigation }) => {
 
     <View style={{ backgroundColor: '#111b21', flex: 1 }}>
       {/* //// fab icon */}
-      <FabComponent />
+      {/* <FabComponent /> */}
       {/* <Fab shadow={2} boxSize='58px' bgColor='#01a985' icon={<MaterialIcons color="white" name="message"  size={28} />} /> */}
 
       <VStack space={1} marginTop={1}>

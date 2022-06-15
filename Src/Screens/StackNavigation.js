@@ -8,6 +8,7 @@ import { NativeBaseProvider } from 'native-base';
 import FabComponent from '../Components/FabComponent';
 
 
+
 const Stack = createStackNavigator();
 
 const StackNavigation = () => {
@@ -52,13 +53,12 @@ const StackNavigation = () => {
           })}
         />
 
-        <Stack.Screen name='Message' component={Message} />
+        <Stack.Screen name='Message' options={{ headerShown:false} } component={Message} />
 
         {/* Fab Component */}
       </Stack.Navigator>
       <FabComponent page={page} />
     </NativeBaseProvider>
- 
   )
 }
 
